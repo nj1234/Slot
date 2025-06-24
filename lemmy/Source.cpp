@@ -1,11 +1,17 @@
 
 #include<iostream>
 
-#include "RandGen.h"
+#include "Field.h"
 
 int main() {
 
-	RandGen r(0,5);
+	RandGen::init(0,static_cast<int>(Symbols::ACE));
 
-	std::cout << r.getRandom();
+	Field f;
+	std::cout << static_cast<int>(f.getSymbol());
+
+	f.roll();
+	std::cout << static_cast<int>(f.getSymbol());
+	f.roll();
+	std::cout << static_cast<int>(f.getSymbol());
 }

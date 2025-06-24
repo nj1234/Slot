@@ -1,10 +1,9 @@
 #pragma once
-
-enum class Symbols {LEMMY,BASS,BITCHES,WHISKY,ACE,END};
+#include "RandGen.h"
+enum class Symbols {LEMMY,BASS,BITCHES,WHISKY,ACE};
 
 class Field
 {
-	
 	Symbols symbol;
 public:
 	Field();
