@@ -2,12 +2,12 @@
 
 enum class Symbols {LEMMY,BASS,BITCHES,WHISKY,ACE,END};
 
-class Fields
+class Field
 {
 	
 	Symbols symbol;
 public:
-	Fields();
+	Field();
 	void roll();
 	inline Symbols getSymbol() const { return this->symbol; }
 
