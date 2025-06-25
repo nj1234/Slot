@@ -10,7 +10,9 @@ public:
 	Field();
 	void roll();
 	inline Symbols getSymbol() const { return this->symbol; }
-	
+	bool operator==(const Field& f) {
+		return f.symbol == this->symbol;
+	}
 	friend std::ostream& operator<<(std::ostream& out, const Field& field);
 };
 

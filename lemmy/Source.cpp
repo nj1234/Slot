@@ -2,6 +2,7 @@
 #include<crtdbg.h>
 #include"Bets.h"
 #include "Board.h"
+#include"OneLineWin.h"
 /*
 
 	TO DO: 
@@ -14,15 +15,19 @@ int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	RandGen::init(0,static_cast<int>(Symbols::ACE));
    
-	Bets b;
+	Board b;
 
-	b.increaseBet();
-	b.increaseBet();
-	b.decreaseBet();
+	WinStrategy* test = new OneLineWin;
 	
-	std::cout << b.getBetValue();
-	
+	b.printBoard();
 
+	if (test->checkIfWin(b.getFieds()))
+		std::cout << "win";
+	else
+		std::cout << "hhhh";
+
+
+	delete test;
 
 	_CrtDumpMemoryLeaks();
 }
