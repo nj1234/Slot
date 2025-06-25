@@ -4,7 +4,7 @@
 
 class RandGen
 {
-private:
+
     static std::mt19937 generator;
     static std::uniform_int_distribution<int> distribution;
 

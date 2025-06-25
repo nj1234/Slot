@@ -10,5 +10,9 @@ public:
 	Board();
 	~Board();
 	void printBoard() const;
+	void spin();
+	void spinField(int);
+	const std::vector<Field*>& getFieds()const;
 };
+
 

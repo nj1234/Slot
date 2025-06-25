@@ -26,3 +26,23 @@ void Board::printBoard() const
 		std::cout << *(this->fields[i])<<" ";
 	}
 }
+
+void Board::spin()
+{
+
+	for (size_t i = 0; i < NUMBER_OF_FIELDS; i++) {
+
+		this->fields[i]->roll();
+	}
+}
+
+void Board::spinField(int index)
+{
+	if(index < NUMBER_OF_FIELDS && index >=0)
+		this->fields[index]->roll();
+}
+
+const std::vector<Field*>& Board::getFieds() const
+{
+	return this->fields;
+}
